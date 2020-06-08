@@ -2,15 +2,17 @@
 1. Comments in clojure - ;
 2. Nullpointer exceptions :- 
 ```json
-  (defn -main
-      [& _]
-      (println "hello expr")
       ;((println "hello "))  ---> println will return null so never use unnesessory braces
-      (foo "vrushali")
-      (main-fn))
 ```   
 
-3. 
+3. Caused by: java.lang.IllegalStateException: var: #'clojuredemo.clojure-functions/messenger2 is not public
+If you try to access private function outside class - use `defn`
+```json
+(defn- messenger2 [greeting & who]
+  (println greeting who)
+  )
+```
+
 
 # Commands 
 1. Run project 
