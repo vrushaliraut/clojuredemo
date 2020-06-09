@@ -8,8 +8,6 @@ A Clojure library designed to understand
 
 ## Usage
 
-FIXME
-
 ## License
 
 Copyright © 2020 FIXME

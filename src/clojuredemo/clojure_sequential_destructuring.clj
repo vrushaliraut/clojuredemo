@@ -4,8 +4,17 @@
 
 (def associate-destructuring {:a 7 :b 2})
 
+(defn fibbonachi []
+  (map first (iterate (fn [a b]
+                        [b (+ a b)]
+                        )
+                      [0 1]))
+
+  )
+
+
 (defn sequential []
-  (let [[ a b c]  stuff]
+  (let [[a b c] stuff]
     (println "Addition of twi num from vactor:" (list (+ a b) (+ b c))))
 
   (let [[a b c d e f] stuff]
@@ -22,10 +31,13 @@
 
   ; associate destructuring
   (let [{:keys [a b c]
-         :or {c 3}} associate-destructuring]
+         :or   {c 3}} associate-destructuring]
     (println "using :or keyword to assign default value :" a b c)
     )
-  )
 
+  ;fibbonachi series
+
+  (println "fibbonacchi series" take 5 fibbonachi)
+  )
 
 
