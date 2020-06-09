@@ -19,5 +19,6 @@ If you try to access private function outside class - use `defn`
     `lein run`
 2. Run test - use packagename.test-class-name
     ` lein test clojuredemo.core-test`
-3. 
+3. `lein deps:tree`
+   `lein run`
 
